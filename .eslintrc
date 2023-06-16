@@ -1,0 +1,6 @@
+{
+   "extends": ["@nyxb"],
+   "rules": {
+     "n/no-path-concat": 0
+   }
+}

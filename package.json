@@ -1,0 +1,53 @@
+{
+  "name": "@nyxb/colors",
+  "version": "0.0.1",
+  "description": "The tiniest and the fastest library for terminal output formatting with ANSI && RGB colors",
+  "author": "Dennis Ollhoff <contact@nyxb.xyz>",
+  "license": "MIT",
+  "repository": "nyxb/colors",
+  "keywords": [
+    "terminal",
+    "colors",
+    "formatting",
+    "cli",
+    "console"
+  ],
+  "sideEffects": false,
+  "main": "./colors.js",
+  "types": "./colors.d.ts",
+  "browser": {
+    "./colors.js": "./colors.browser.js"
+  },
+  "files": [
+    "colors.*",
+    "types.ts"
+  ],
+  "scripts": {
+    "test": "node tests/test.js",
+    "test:environments": "node tests/environments.js",
+    "lint": "eslint .",
+    "benchmark:complex": "node benchmarks/complex.js",
+    "benchmark:loading-runner": "node benchmarks/loading-runner.js",
+    "benchmark:loading": "node benchmarks/loading.js",
+    "benchmark:simple": "node benchmarks/simple.js",
+    "benchmark:size": "node benchmarks/size.js",
+    "benchmark:all": "nyxr benchmark:complex && npm run benchmark:loading-runner && npm run benchmark:loading && npm run benchmark:simple && npm run benchmark:size",
+    "release": "nyxlx changelogen@latest --release && pnpm publish"
+  },
+  "devDependencies": {
+    "@nyxb/eslint-config": "^0.0.53",
+    "ansi-colors": "^4.1.1",
+    "benchmark": "^2.1.4",
+    "chalk": "^4.1.2",
+    "clean-publish": "^3.0.3",
+    "cli-color": "^2.0.0",
+    "colorette": "^2.0.12",
+    "consolji": "^0.1.4",
+    "eslint": "^8.42.0",
+    "kleur": "^4.1.4",
+    "nanocolors": "^0.2.12"
+  },
+  "clean-publish": {
+    "cleanDocs": true
+  }
+}
