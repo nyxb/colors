@@ -1,6 +1,6 @@
 {
   "name": "@nyxb/colors",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "The tiniest and the fastest library for terminal output formatting with ANSI && RGB colors",
   "author": "Dennis Ollhoff <contact@nyxb.xyz>",
   "license": "MIT",
